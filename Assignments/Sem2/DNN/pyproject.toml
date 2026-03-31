@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dnn-assignment"
+version = "0.1.0"
+description = "From-scratch DNN Assignment 1 project (baseline vs MLP on Adult Income)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "requests",
+]
+
+[project.scripts]
+dnn = "src.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
